@@ -5,6 +5,7 @@ import { useState, useRef } from 'react';
 // - Controla la reproducción de audio global
 // - Exposición: play, pause, toggle, setVolume, estado playing
 // - Recibe src del audio
+
 export default function useAudio(src) {
     const audioRef = useRef(new Audio(src));
     const [playing, setPlaying] = useState(false);
