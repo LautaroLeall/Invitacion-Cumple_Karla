@@ -8,7 +8,6 @@ import './Footer.css';
 
 export default function Footer({
     phone = '+54 9 3874 57-9414',
-    copyright = '© 2025 Karla',
     onOpenGifts = () => { },
     onOpenInfo = () => { }
 }) {
@@ -58,7 +57,6 @@ export default function Footer({
                 </div>
 
                 <div className="footer-bottom">
-                    <small>{copyright}</small>
                     <BackToTop />
                 </div>
             </footer>
