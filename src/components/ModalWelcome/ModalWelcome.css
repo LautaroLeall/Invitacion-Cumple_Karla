@@ -1,0 +1,60 @@
+/* ModalWelcome.css */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: hsla(333, 100%, 13%, 0.5);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background: white;
+    padding: 4rem;
+    border-radius: 14px;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+}
+
+.title {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+.description {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.musicButton {
+    font-size: 1.1rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
+    margin-top: 1.5rem;
+}
+
+.buttons button {
+    background-color: #41001d;
+    color: #ffa9c5;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.buttons button:hover {
+    transform: scale(0.95);
+}
