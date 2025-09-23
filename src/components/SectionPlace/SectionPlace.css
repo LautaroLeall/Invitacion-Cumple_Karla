@@ -1,0 +1,48 @@
+/* src/components/SectionPlace/SectionPlace.css */
+.section-place {
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.place-card {
+    width: 100%;
+    max-width: 720px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 30px rgba(16, 24, 40, 0.06);
+    text-align: center;
+    border: 1px solid hsla(335, 46%, 30%, 0.4);
+}
+
+.place-name {
+    color: #ffa9c5;
+    font-weight: 600;
+    margin: 0.25rem 0;
+}
+
+.place-address {
+    color: #6b7280;
+    margin: 0.5rem 0 1rem;
+}
+
+.place-actions {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+/* responsive */
+@media (max-width: 640px) {
+    .place-card {
+        padding: 1rem;
+        border-radius: 12px;
+    }
+
+    .place-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
