@@ -90,7 +90,7 @@ export default function FormModal({ isOpen, onClose, phone }) {
                     </label>
 
                     <fieldset className="rsvp-fieldset">
-                        <legend>¿Podrás asistir?</legend>
+                        <legend className="rsvp-legend">¿Podrás asistir?</legend>
                         <label className="rsvp-radio">
                             <input
                                 type="radio"
