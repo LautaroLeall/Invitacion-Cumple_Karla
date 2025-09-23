@@ -1,8 +1,8 @@
-/* src/components/MapModal/MapModal.css */
+/* MapModal.css */
 .map-backdrop {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: hsla(333, 100%, 13%, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,7 +44,7 @@
 
 .map-address {
     margin: 0.35rem 0 0;
-    color: #6b7280;
+    color: #a05471;
     font-size: 0.95rem;
 }
 
@@ -66,7 +66,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #6b7280;
+    color: #a05471;
     background: #f3f4f6;
     border-radius: 10px;
     padding: 1rem;
@@ -78,24 +78,6 @@
     padding: 0.85rem 1rem;
     justify-content: flex-end;
     border-top: 1px solid rgba(15, 23, 42, 0.04);
-}
-
-.btn-primary {
-    background: linear-gradient(90deg, #08a4b6, #ff7b6b);
-    color: white;
-    border: none;
-    padding: 0.55rem 0.95rem;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: 600;
-}
-
-.btn-outline {
-    background: transparent;
-    border: 1px solid rgba(8, 164, 182, 0.12);
-    padding: 0.55rem 0.9rem;
-    border-radius: 10px;
-    cursor: pointer;
 }
 
 /* responsive */

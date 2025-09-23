@@ -2,7 +2,7 @@
 .info-backdrop {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.45);
+    background: hsla(333, 100%, 13%, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,18 +33,18 @@
 .info-list {
     margin: 0.6rem 0;
     padding-left: 1.15rem;
-    color: #0f172a;
+    color: #ffa9c5;
 }
 
 .info-key {
     font-weight: 700;
-    color: #0f172a;
+    color: #41001d;
     min-width: 70px;
 }
 
 .info-value {
     flex: 1;
-    color: #0f172a;
+    color: #41001d;
     padding-left: 0.6rem;
 }
 
@@ -57,12 +57,12 @@
     background: #f8fafc;
     padding: 0.6rem;
     border-radius: 8px;
-    border: 1px solid rgba(8, 164, 182, 0.06);
+    border: 1px solid hsla(333, 100%, 13%, 0.5);
 }
 
 .btn-copy-small {
     background: transparent;
-    border: 1px solid rgba(8, 164, 182, 0.12);
+    border: 1px solid hsla(333, 100%, 13%, 0.5);
     padding: 0.4rem 0.6rem;
     border-radius: 8px;
     cursor: pointer;
