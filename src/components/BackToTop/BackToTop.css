@@ -1,0 +1,16 @@
+/* src/components/BackToTop/BackToTop.css */
+.back-to-top {
+    cursor: pointer;
+    background: linear-gradient(90deg, hsla(340, 100%, 83%), hsla(333, 100%, 13%, 0.8));
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.75rem 0.85rem;
+    transition: transform 150ms ease;
+}
+
+.back-to-top:hover {
+    transform: scale(0.95);
+}

@@ -1,0 +1,137 @@
+/* Footer.css */
+.motion-footer {
+    background: linear-gradient(90deg, rgba(255, 168, 197, 0.3), hsla(333, 100%, 13%, 0.3));
+    padding: 1.4rem 1rem;
+    border: 1px solid  hsla(333, 100%, 13%, 0.8);
+}
+
+/* Footer base */
+.site-footer {
+    color: #e6eef0;
+    padding: 1.4rem 1rem;
+    font-size: 0.95rem;
+}
+
+/* Inner grid */
+.footer-inner {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* Brand */
+.brand-line {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.brand-icon {
+    color: #41001d;
+    font-size: 1.2rem;
+}
+
+.brand-title {
+    font-size: 1.05rem;
+    color: #41001d;
+    font-weight: 700;
+}
+
+.footer-sub {
+    margin: 0.45rem 0 0;
+    color: #712a47;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Contact */
+.footer-contact {
+    text-align: left;
+}
+
+.footer-phone {
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
+    color: #41001d;
+    background: hsla(335, 46%, 30%, 0.5);
+    padding: 0.45rem 0.65rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-actions {
+    margin-top: 0.7rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* Bottom row */
+.footer-bottom {
+    max-width: 1100px;
+    margin: 0.9rem auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-bottom small {
+    color: #712a47;
+    font-size: 0.9rem;
+}
+
+/* Buttons */
+.btn-outline.small {
+    padding: 0.4rem 0.65rem;
+}
+
+/* Responsive */
+@media (max-width: 740px) {
+    .footer-inner {
+        padding-bottom: 0.6rem;
+    }
+
+    .brand-title {
+        font-size: 1rem;
+    }
+
+    .social-links a {
+        width: 34px;
+        height: 34px;
+    }
+
+    .footer-bottom {
+        font-size: 0.9rem;
+        justify-content: center;
+        gap: 0.6rem;
+    }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    .back-to-top,
+    .btn-outline.small {
+        transition: none !important;
+    }
+}
+
+/* Visually-hidden for accessibility (Contacto) */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
