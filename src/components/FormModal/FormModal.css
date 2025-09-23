@@ -1,8 +1,8 @@
-/* src/components/RSVPModal/RSVPModal.css */
+/* FormModal.css */
 .rsvp-backdrop {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: hsla(333, 100%, 13%, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,14 +41,19 @@
     display: flex;
     flex-direction: column;
     font-size: 0.95rem;
-    color: #0f172a;
+    color: #41001d;
 }
 
 .rsvp-label input {
     padding: 0.6rem;
     border-radius: 8px;
-    border: 1px solid #e5e7eb;
+    border: 1px solid #ffa9c5;
+    color: #41001d;
     margin-top: 0.35rem;
+}
+
+.rsvp-label input:focus {
+    outline: none;
 }
 
 .rsvp-fieldset {
@@ -66,6 +71,14 @@
     align-items: center;
     font-weight: 600;
     cursor: pointer;
+    color: #41001d;
+}
+
+.rsvp-legend {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #41001d;
 }
 
 .rsvp-error {

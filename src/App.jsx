@@ -8,6 +8,7 @@ import SectionDay from './components/SectionDay/SectionDay';
 import AudioPlayer from './components/AudioPlayer/AudioPlayer';
 import SectionPlace from './components/SectionPlace/SectionPlace';
 import SectionLocation from './components/SectionLocation/SectionLocation';
+import SectionGifts from './components/SectionGifts/SectionGifts';
 import Footer from './components/Footer/Footer';
 import FormModal from './components/FormModal/FormModal';
 import MapModal from './components/MapModal/MapModal';
@@ -41,7 +42,7 @@ function App() {
 
       <SecondaryBanner
         title="¡LLEGÓ EL GRAN DÍA!"
-        subtitle="15 de Karla"
+        subtitle="Mis 15 años"
       />
 
       <SectionDay
@@ -65,6 +66,13 @@ function App() {
         placeName="Camino a San Agustin"
         address="Una Casa"
         onOpenMap={() => setMapOpen(true)}
+      />
+
+      <SectionGifts
+        headline="¡Tu presencia es el regalo más importante!"
+        sub="Pero si deseas hacerme un obsequio podrás depositar en la siguiente cuenta:"
+        btnText="VER CUENTA BANCARIA"
+        onOpen={() => setGiftsOpen(true)}
       />
 
       <Footer

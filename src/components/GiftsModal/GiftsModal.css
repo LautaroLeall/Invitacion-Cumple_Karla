@@ -2,7 +2,7 @@
 .gifts-backdrop {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: hsla(333, 100%, 13%, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,7 +31,7 @@
 }
 
 .gifts-sub {
-    color: #6b7280;
+    color: #ffa9c5;
     margin-top: 0.25rem;
     margin-bottom: 0.8rem;
 }
@@ -50,24 +50,24 @@
     background: #f8fafc;
     padding: 0.6rem;
     border-radius: 8px;
-    border: 1px solid rgba(8, 164, 182, 0.06);
+    border: 1px solid hsla(333, 100%, 13%, 0.5);
 }
 
 .gift-key {
     font-weight: 700;
-    color: #0f172a;
+    color: #41001d;
     min-width: 70px;
 }
 
 .gift-value {
     flex: 1;
-    color: #0f172a;
+    color: #41001d;
     padding-left: 0.6rem;
 }
 
 .btn-copy {
     background: transparent;
-    border: 1px solid rgba(8, 164, 182, 0.12);
+    border: 1px solid hsla(333, 100%, 13%, 0.5);
     padding: 0.45rem 0.6rem;
     border-radius: 8px;
     cursor: pointer;
