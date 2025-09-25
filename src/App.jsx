@@ -21,7 +21,7 @@ function App() {
   const [mapOpen, setMapOpen] = useState(false);
   const [giftsOpen, setGiftsOpen] = useState(false);
   const [infoOpen, setInfoOpen] = useState(false);
-  const { playing, play, toggle } = useAudio('/Coldplay-Paradise.mp3');
+  const { playing, play, toggle } = useAudio('/Enredados.mp3');
 
   const handleChooseMusic = (playMusic) => {
     if (playMusic) play();
