@@ -62,10 +62,9 @@
 }
 
 .sb-heart {
-    margin-top: 8px;
-    color: #a05471;
-    font-size: 22px;
-    opacity: 0.95
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
 }
 
 /* strokes (decoración inferior) */

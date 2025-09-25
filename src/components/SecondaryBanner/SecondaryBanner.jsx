@@ -5,7 +5,7 @@ import './SecondaryBanner.css';
 export default function SecondaryBanner({
     titleTop = 'MIS XV',
     titleMain = 'KARLA',
-    titleBottom = '❤',
+    titleBottom = '/corazon-icono.jpg',
 }) {
     const ref = useRef(null);
     const [show, setShow] = useState(false);
@@ -34,7 +34,7 @@ export default function SecondaryBanner({
                 <div className="sb-circle" role="img" aria-label={`${titleTop} ${titleMain}`}>
                     <div className="sb-top">{titleTop}</div>
                     <div className="sb-main">{titleMain}</div>
-                    <div className="sb-heart" aria-hidden="true">{titleBottom}</div>
+                    <img className="sb-heart" src={titleBottom} alt="❤" />
                 </div>
 
                 <div className="sb-strokes-wrap" aria-hidden="true">
