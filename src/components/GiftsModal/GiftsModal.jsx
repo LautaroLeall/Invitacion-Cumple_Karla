@@ -10,9 +10,9 @@ export default function GiftsModal({
     onClose,
     data = {
         cuenta: 'Mercado Pago',
-        alias: 'karla.alias',
-        cbu: '0000003100025232322858',
-        titular: 'Karla Barrionuevo',
+        alias: 'karlamili2010',
+        cbu: '0000003100047708556774',
+        titular: 'Carlos Victor Barrionuevo',
     },
 }) {
     const closeRef = useRef(null);
