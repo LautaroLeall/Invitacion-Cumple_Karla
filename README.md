@@ -1,13 +1,82 @@
-# React + Vite
+# 🎉 Invitación — Karla (Fiesta)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Invitación web interactiva para la fiesta de Karla** desarrollada con **React + Vite**.  
+Proyecto pensado como una experiencia visual y animada: banner de bienvenida, tarjeta con detalles del evento, modales (mapa, información, regalos), animaciones con **GSAP** y **Framer Motion**, Lottie para micro-animaciones y utilidades reusables.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologías principales
 
-## Expanding the ESLint configuration
+- ⚛️ **React (Vite)**
+- 🧩 JavaScript (ES6+), JSX
+- 🎨 CSS modular (cada componente con su propio `.css`)
+- 💅 **Bootstrap 5** (utilidades)
+- ✨ **GSAP** (animaciones)
+- 🎬 **Framer Motion** (animaciones declarativas)
+- 🎞️ **Lottie React** (animaciones JSON)
+- 🔣 **react-icons** / `@react-icons/all-files` (íconos)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# Invitacion-Cumple_Karla
+---
+
+## 📁 Estructura del proyecto
+
+```
+Invitacion-Cumple_Karla/
+│── public/
+│── src/
+│   ├── components/
+│   │   ├── AudioPlayer/
+│   │   ├── BackToTop/
+│   │   ├── Footer/
+│   │   ├── FormModal/
+│   │   ├── GiftsModal/
+│   │   ├── HeaderBanner/
+│   │   ├── InfoModal/
+│   │   ├── MapModal/
+│   │   ├── ModalWelcome/
+│   │   ├── SecondaryBanner/
+│   │   ├── SectionDay/
+│   │   ├── SectionGifts/
+│   │   ├── SectionLocation/
+│   │   ├── SectionPlace/
+│   ├── hooks/
+│   │   ├── useAudio.js
+│   │   └── useCountdown.js
+│   ├── utils/
+│   │   ├── calendar.js
+│   │   ├── clipboard.js
+│   │   └── whatsapp.js
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── package.json
+└── README.md
+```
+
+---
+
+## ⚙️ Instalación y uso (local)
+
+```bash
+1. Clonar el repositorio:
+
+git clone https://github.com/LautaroLeall/Invitacion-Cumple_Karla.git
+```
+
+```bash
+2. Ejecutar el proyecto:
+
+cd Invitacion-Cumple_Karla
+```
+
+```bash
+3. Instalar dependencias:
+
+npm install
+```
+
+```bash
+4. Iniciar el servidor de desarrollo:
+
+npm run dev
+```
