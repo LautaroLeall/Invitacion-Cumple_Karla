@@ -1,5 +1,6 @@
 // src/components/MapModal/MapModal.jsx
 import { useEffect, useRef } from 'react';
+import { FaTimes, FaMapMarkedAlt } from 'react-icons/fa';
 import './MapModal.css';
 
 // - Modal que muestra un mapa embebido (iframe) y link para abrir en Maps
@@ -7,7 +8,7 @@ export default function MapModal({
     isOpen,
     onClose,
     title = 'Lugar del evento',
-    address = 'Camino a San Agustin, Una Casa',
+    address = 'Av. Ficticia 123, Ciudad',
     embedUrl = 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3711.826706659622!2d-65.4157778!3d-24.945083299999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDU2JzQyLjMiUyA2NcKwMjQnNTYuOCJX!5e1!3m2!1ses-419!2sar!4v1758635634544!5m2!1ses-419!2sar',
     mapsLink = 'https://maps.app.goo.gl/iiQjTyivvQUzFi238',
 }) {
@@ -61,7 +62,7 @@ export default function MapModal({
                     aria-label="Cerrar mapa"
                     onClick={onClose}
                 >
-                    ×
+                    <FaTimes />
                 </button>
 
                 <header className="map-header">
@@ -91,7 +92,7 @@ export default function MapModal({
 
                 <footer className="map-footer">
                     <button className="btn-primary" onClick={handleOpenMaps} aria-label="Abrir en Maps">
-                        Abrir en Maps
+                        <FaMapMarkedAlt /> Abrir en Maps
                     </button>
                     <button className="btn-outline" onClick={onClose} aria-label="Cerrar">
                         Cerrar
