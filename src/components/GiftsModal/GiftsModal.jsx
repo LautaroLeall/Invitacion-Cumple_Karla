@@ -1,5 +1,6 @@
 // src/components/GiftsModal/GiftsModal.jsx
 import { useEffect, useRef, useState } from 'react';
+import { FaTimes, FaRegCopy } from 'react-icons/fa';
 import './GiftsModal.css';
 import { copyToClipboard } from '../../utils/clipboard';
 
@@ -10,9 +11,9 @@ export default function GiftsModal({
     onClose,
     data = {
         cuenta: 'Mercado Pago',
-        alias: 'karlamili2010',
-        cbu: '0000003100047708556774',
-        titular: 'Carlos Victor Barrionuevo',
+        alias: 'karla.ejemplo.mp',
+        cbu: '0000000000000000000000',
+        titular: 'Karla Ejemplo',
     },
 }) {
     const closeRef = useRef(null);
@@ -53,7 +54,7 @@ export default function GiftsModal({
     return (
         <div className="gifts-backdrop" role="dialog" aria-modal="true" aria-labelledby="giftsTitle">
             <div className="gifts-modal">
-                <button ref={closeRef} className="gifts-close" aria-label="Cerrar" onClick={onClose}>×</button>
+                <button ref={closeRef} className="gifts-close" aria-label="Cerrar" onClick={onClose}><FaTimes /></button>
                 <h2 id="giftsTitle">Regalos</h2>
                 <p className="gifts-sub">Si deseas regalar algo además de tu hermosa presencia, te dejo mis datos:</p>
 
@@ -66,13 +67,13 @@ export default function GiftsModal({
                     <div className="gift-row">
                         <div className="gift-key">Alias</div>
                         <div className="gift-value">{data.alias}</div>
-                        <button className="btn-copy" onClick={() => handleCopy('Alias', data.alias)}>Copiar</button>
+                        <button className="btn-copy" onClick={() => handleCopy('Alias', data.alias)}><FaRegCopy /> Copiar</button>
                     </div>
 
                     <div className="gift-row">
                         <div className="gift-key">CBU</div>
                         <div className="gift-value">{data.cbu}</div>
-                        <button className="btn-copy" onClick={() => handleCopy('CBU', data.cbu)}>Copiar</button>
+                        <button className="btn-copy" onClick={() => handleCopy('CBU', data.cbu)}><FaRegCopy /> Copiar</button>
                     </div>
 
                     <div className="gift-row">
