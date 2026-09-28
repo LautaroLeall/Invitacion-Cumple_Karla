@@ -13,8 +13,8 @@ export default function Footer({
 }) {
 
     const footerVariants = {
-        hidden: { opacity: 0, y: 10 },
-        show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } }
+        hidden: { opacity: 0 },
+        show: { opacity: 1, transition: { duration: 0.6, ease: 'easeOut' } }
     };
 
     // normalizamos el teléfono para mostrar y para link
@@ -22,7 +22,7 @@ export default function Footer({
     const phoneForLink = phone.replace(/\D/g, '');
 
     return (
-        <motion.div className="motion-footer" initial="hidden" animate="show" variants={footerVariants}>
+        <motion.div className="motion-footer" initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }} variants={footerVariants}>
             <footer className="site-footer" role="contentinfo" aria-label="Información del pie de página">
                 <div className="footer-inner">
                     <div className="footer-col footer-brand">
@@ -46,10 +46,10 @@ export default function Footer({
                         </a>
 
                         <div className="footer-actions">
-                            <button className="btn-outline small" onClick={onOpenGifts} aria-label="Ver regalos">
+                            <button className="btn-outline" onClick={onOpenGifts} aria-label="Ver regalos">
                                 Ver regalos
                             </button>
-                            <button className="btn-outline small" onClick={onOpenInfo} aria-label="Mas información">
+                            <button className="btn-outline" onClick={onOpenInfo} aria-label="Mas información">
                                 + Info
                             </button>
                         </div>
