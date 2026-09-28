@@ -1,16 +1,22 @@
 /* BackToTop.css */
 .back-to-top {
-    cursor: pointer;
-    background: linear-gradient(90deg, hsla(340, 100%, 83%), hsla(333, 100%, 13%, 0.8));
-    color: white;
-    border: none;
-    border-radius: 15px;
+    background: transparent;
+    border: 2px solid hsla(333, 100%, 25%, 0.8);
+    color: #712a47;
+    padding: 0.75rem 1.4rem;
+    letter-spacing: 0.05rem;
+    border-radius: 12px;
     font-weight: 700;
     font-size: 1rem;
-    padding: 0.75rem 0.85rem;
-    transition: transform 150ms ease;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .back-to-top:hover {
-    transform: scale(0.95);
+    transform: translateY(-3px);
+    background: rgba(113, 42, 71, 0.05);
+    box-shadow: 0 4px 15px rgba(113, 42, 71, 0.1);
 }
