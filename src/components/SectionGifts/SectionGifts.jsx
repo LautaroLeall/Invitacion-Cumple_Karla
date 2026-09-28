@@ -1,5 +1,6 @@
 // src/components/SectionGifts/SectionGifts.jsx
 import React from 'react';
+import { motion } from 'framer-motion';
 import './SectionGifts.css';
 
 export default function SectionGifts({
@@ -9,7 +10,14 @@ export default function SectionGifts({
     btnText = 'VER CUENTA BANCARIA',
 }) {
     return (
-        <section className="section-gifts" aria-labelledby="giftsTitle">
+        <motion.section 
+            className="section-gifts" 
+            aria-labelledby="giftsTitle"
+            initial={{ opacity: 0, y: 60, scale: 0.9, rotateX: 20 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1, rotateX: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, type: 'spring', bounce: 0.4 }}
+        >
             <div className="section-gifts-card">
                 <div className="gifts-icon" aria-hidden="true">
                     <img className='gifts-icon-img' src='/gifts-icon.jpg' alt='Regalo' />
@@ -28,6 +36,6 @@ export default function SectionGifts({
                     </button>
                 </div>
             </div>
-        </section>
+        </motion.section>
     );
 }
