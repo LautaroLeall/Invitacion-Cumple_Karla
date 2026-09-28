@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { buildGoogleCalendarLink } from '../../utils/calendar';
 import './SectionDay.css';
 
+import { motion } from 'framer-motion';
+
 // SectionDay
 // - Muestra la fecha del evento y permite "Agendar"
 export default function SectionDay({
@@ -25,7 +27,7 @@ export default function SectionDay({
             const titleForCalendar = `15 años de Karla`;
             const detailsForCalendar = [
                 `Dirección: ${location}`,
-                `Contacto: 3874579414`,
+                `SI QUERES UNA TARJETA ASI PERSONALIZADA COMUNICATE A +54 9 381 339-9463`,
                 '¡Llevá traje de baño!'
             ].join('\n');
 
@@ -56,7 +58,15 @@ export default function SectionDay({
     };
 
     return (
-        <section className="section-day" id="section-day" aria-labelledby="dayTitle">
+        <motion.section 
+            className="section-day" 
+            id="section-day" 
+            aria-labelledby="dayTitle"
+            initial={{ opacity: 0, y: 60, scale: 0.9, rotateX: 20 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1, rotateX: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, type: 'spring', bounce: 0.4 }}
+        >
             <div className="day-card">
                 <h2 id="dayTitle">{title}</h2>
                 <p className="day-datetime">
@@ -72,6 +82,6 @@ export default function SectionDay({
 
                 {toast && <div className="toast">{toast}</div>}
             </div>
-        </section>
+        </motion.section>
     );
 }
