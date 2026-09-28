@@ -2,6 +2,7 @@
 import { useEffect, useRef } from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
+import { FaGlassCheers, FaArrowDown } from 'react-icons/fa';
 import useCountdown from '../../hooks/useCountdown';
 import './HeaderBanner.css';
 import { gsap } from 'gsap';
@@ -73,9 +74,9 @@ export default function HeaderBanner({
 
             <motion.div
                 className="hero-inner"
-                initial={{ opacity: 0, y: 10, scale: 0.995 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 0.9, ease: 'easeOut' }}
+                initial={{ opacity: 0, y: 50, scale: 0.8, filter: 'blur(10px)' }}
+                animate={{ opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' }}
+                transition={{ duration: 1.2, type: 'spring', bounce: 0.4 }}
             >
                 <h1 className="hero-name">{name}</h1>
                 <p className="hero-date">{dateString}</p>
@@ -84,7 +85,9 @@ export default function HeaderBanner({
                 {/* Countdown */}
                 <div className="countdown countdown--hero" aria-live="polite">
                     {finished ? (
-                        <div className="countdown-finished">¡Hoy es el gran día! 🎉</div>
+                        <div className="countdown-finished">
+                            ¡Hoy es el gran día! <FaGlassCheers style={{marginLeft: '8px'}} />
+                        </div>
                     ) : (
                         <div className="countdown-grid">
                             <div className="countdown-box"><span>{days}</span><small>días</small></div>
@@ -105,7 +108,7 @@ export default function HeaderBanner({
                     if (el) el.scrollIntoView({ behavior: 'smooth' });
                 }}
             >
-                ↓
+                <FaArrowDown />
             </button>
         </header>
     );
