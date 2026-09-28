@@ -1,29 +1,43 @@
 /* Footer.css */
 .motion-footer {
-    background: linear-gradient(90deg, rgba(255, 168, 197, 0.3), hsla(333, 100%, 13%, 0.3));
-    padding: 1.4rem 1rem;
-    border: 1px solid  hsla(333, 100%, 13%, 0.8);
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 3rem 1.5rem 2rem;
+    border-top: 1px solid rgba(255, 169, 197, 0.4);
+    box-shadow: 0 -10px 40px rgba(160, 84, 113, 0.05);
+    margin-top: 2rem;
 }
 
 /* Footer base */
 .site-footer {
-    color: #e6eef0;
-    padding: 1.4rem 1rem;
-    font-size: 0.95rem;
+    color: #41001d;
+    max-width: 1100px;
+    margin: 0 auto;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
 }
 
 /* Inner grid */
 .footer-inner {
     display: flex;
-    gap: 1rem;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    max-width: 1100px;
-    margin: 0 auto;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
     flex-wrap: wrap;
 }
 
 /* Brand */
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .brand-line {
     display: flex;
     align-items: center;
@@ -31,91 +45,91 @@
 }
 
 .brand-icon {
-    color: #41001d;
-    font-size: 1.2rem;
+    color: #a05471;
+    font-size: 1.8rem;
 }
 
 .brand-title {
-    font-size: 1.05rem;
+    font-size: 1.4rem;
     color: #41001d;
+    font-family: 'Playfair Display', serif;
     font-weight: 700;
 }
 
 .footer-sub {
-    margin: 0.45rem 0 0;
-    color: #712a47;
-    font-weight: bold;
-    font-size: 0.9rem;
+    margin: 0.25rem 0 0;
+    color: #a05471;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
 
 /* Contact */
 .footer-contact {
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .footer-phone {
     display: inline-flex;
-    gap: 0.5rem;
+    gap: 0.6rem;
     align-items: center;
-    color: #41001d;
-    background: hsla(335, 46%, 30%, 0.5);
-    padding: 0.45rem 0.65rem;
-    border-radius: 10px;
+    color: white;
+    background: linear-gradient(135deg, hsla(340, 100%, 75%), hsla(333, 100%, 25%, 0.9));
+    padding: 0.75rem 1.25rem;
+    border-radius: 12px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(160, 84, 113, 0.3);
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.footer-phone:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(160, 84, 113, 0.4);
 }
 
 .footer-actions {
-    margin-top: 0.7rem;
+    margin-top: 1rem;
     display: flex;
-    gap: 0.5rem;
+    gap: 0.8rem;
     flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 /* Bottom row */
 .footer-bottom {
-    max-width: 1100px;
-    margin: 0.9rem auto 0;
+    width: 100%;
+    margin-top: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(160, 84, 113, 0.15);
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
 }
 
 /* Buttons */
 .btn-outline.small {
-    padding: 0.4rem 0.65rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
 }
 
 /* Responsive */
-@media (max-width: 740px) {
+@media (max-width: 768px) {
     .footer-inner {
-        padding-bottom: 0.6rem;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
-    .brand-title {
-        font-size: 1rem;
+    .footer-brand, .footer-contact {
+        align-items: center;
     }
-
-    .social-links a {
-        width: 34px;
-        height: 34px;
-    }
-
-    .footer-bottom {
-        font-size: 0.9rem;
+    
+    .footer-actions {
         justify-content: center;
-        gap: 0.6rem;
-    }
-}
-
-/* Respect reduced motion */
-@media (prefers-reduced-motion: reduce) {
-
-    .back-to-top,
-    .btn-outline.small {
-        transition: none !important;
     }
 }
 
