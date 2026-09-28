@@ -1,5 +1,5 @@
 // src/App.jsx
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import useAudio from './hooks/useAudio';
 import ModalWelcome from './components/ModalWelcome/ModalWelcome';
 import HeaderBanner from './components/HeaderBanner/HeaderBanner';
@@ -23,6 +23,10 @@ function App() {
   const [infoOpen, setInfoOpen] = useState(false);
   const { playing, play, toggle } = useAudio('/Enredados.mp3');
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }, []);
+
   const handleChooseMusic = (playMusic) => {
     if (playMusic) play();
     setModalOpen(false);
@@ -34,9 +38,9 @@ function App() {
 
       <HeaderBanner
         name="Karla"
-        dateString="11 - 10 - 2025"
+        dateString="15 - 12 - 2025"
         subtitle="Se acerca el gran día, ¡no te lo pierdas!"
-        targetDate="2025-10-11T11:00:00"
+        targetDate="2025-12-15T11:00:00"
         backgroundImage="/banner-home.jpg"
       />
 
@@ -47,24 +51,24 @@ function App() {
 
       <SectionDay
         title="Dia"
-        startDate="2025-10-11T11:00:00"
+        startDate="2025-12-15T11:00:00"
         durationMinutes={180}
-        location="Camino a San Agustin - Una Casa"
+        location="Salón de Eventos El Ensueño"
       />
 
       <AudioPlayer playing={playing} toggle={toggle} />
 
       <SectionPlace
         title="Lugar"
-        placeName="Camino a San Agustin"
-        address="Una Casa"
+        placeName="Salón de Eventos El Ensueño"
+        address="Av. Ficticia 123"
         onOpenRsvp={() => setRsvpOpen(true)}
       />
 
       <SectionLocation
         title="Ubicación"
-        placeName="Camino a San Agustin"
-        address="Una Casa"
+        placeName="Salón de Eventos El Ensueño"
+        address="Av. Ficticia 123"
         onOpenMap={() => setMapOpen(true)}
       />
 
@@ -76,7 +80,7 @@ function App() {
       />
 
       <Footer
-        phone="+54 9 3874 57-9414"
+        phone="+54 9 381 339-9463"
         placeName="Fiesta al mediodía"
         onOpenGifts={() => setGiftsOpen(true)}
         onOpenInfo={() => setInfoOpen(true)}
