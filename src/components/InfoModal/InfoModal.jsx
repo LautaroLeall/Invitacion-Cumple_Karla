@@ -1,5 +1,6 @@
 // src/components/InfoModal/InfoModal.jsx
 import { useEffect, useRef } from 'react';
+import { FaTimes, FaRegCopy } from 'react-icons/fa';
 import './InfoModal.css';
 import { copyToClipboard } from '../../utils/clipboard';
 
@@ -11,7 +12,7 @@ export default function InfoModal({
         '¡Confirmar asistencia a la brevedad!',
         '¡Llevar traje de baño!',
     ],
-    contact = '3874579414',
+    contact = '3813399463',
 }) {
     const closeRef = useRef(null);
     const prevFocus = useRef(null);
@@ -48,7 +49,7 @@ export default function InfoModal({
     return (
         <div className="info-backdrop" role="dialog" aria-modal="true" aria-labelledby="infoTitle">
             <div className="info-modal">
-                <button ref={closeRef} className="info-close" aria-label="Cerrar" onClick={onClose}>×</button>
+                <button ref={closeRef} className="info-close" aria-label="Cerrar" onClick={onClose}><FaTimes /></button>
                 <h2 id="infoTitle">Tips y Notas</h2>
 
                 <ul className="info-list">
@@ -56,9 +57,9 @@ export default function InfoModal({
                 </ul>
 
                 <div className="info-contact">
-                    <div className="info-key">Contacto Carlos</div>
+                    <div className="info-key">Contacto Lautaro Leal</div>
                     <div className="info-value">{contact}</div>
-                    <button className="btn-copy-small" onClick={handleCopyNumber}>Copiar</button>
+                    <button className="btn-copy-small" onClick={handleCopyNumber}><FaRegCopy /> Copiar</button>
                 </div>
 
                 <div className="info-footer">
