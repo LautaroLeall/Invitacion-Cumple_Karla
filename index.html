@@ -37,8 +37,21 @@
 </head>
 
 <body>
+  <noscript>Necesitas activar JavaScript para ver esta invitación.</noscript>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
+
+  <!-- Forzar eliminación de carteles inyectados por Netlify -->
+  <script>
+    const observer = new MutationObserver((mutations) => {
+      document.querySelectorAll('iframe, div[id*="netlify"], div[id*="nl-"]').forEach(el => {
+        if (el.id.includes('netlify') || el.id.includes('nl-') || (el.src && el.src.includes('netlify'))) {
+          el.remove();
+        }
+      });
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+  </script>
 </body>
 
 </html>
