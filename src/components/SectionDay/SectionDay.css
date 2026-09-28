@@ -55,20 +55,18 @@
 
 /* responsive */
 @media (max-width: 640px) {
-    @media (max-width: 640px) {
-        .day-card {
-            padding: 1.5rem 1rem;
-            border-radius: 16px;
-        }
+    .day-card {
+        padding: 1.5rem 1rem;
+        border-radius: 16px;
+    }
 
-        .day-actions {
-            flex-direction: column;
-            gap: 0.5rem;
-        }
+    .day-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
 
-        .btn-primary,
-        .btn-outline {
-            width: 100%;
-        }
+    .btn-primary,
+    .btn-outline {
+        width: 100%;
     }
 }
