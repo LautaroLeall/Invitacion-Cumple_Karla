@@ -1,13 +1,14 @@
 // src/components/FormModal/FormModal.jsx
-import { useEffect, useRef, useState } from 'react';
-import './FormModal.css';
-import { openWhatsApp } from '../../utils/whatsapp';
+import { useEffect, useRef, useState } from "react";
+import { FaTimes, FaWhatsapp } from 'react-icons/fa';
+import "./FormModal.css";
+import { openWhatsApp } from "../../utils/whatsapp";
 
 // - valida nombre/apellido y selección (Asistir / No asistir)
 // - al submit arma el mensaje y redirige a WhatsApp (openWhatsApp)
 export default function FormModal({ isOpen, onClose, phone }) {
-    const [nombre, setNombre] = useState('');
-    const [apellido, setApellido] = useState('');
+    const [nombre, setNombre] = useState("");
+    const [apellido, setApellido] = useState("");
     const [asistira, setAsistira] = useState(null); // true = sí, false = no, null = no seleccionado
     const [error, setError] = useState(null);
     const firstInputRef = useRef(null);
@@ -16,7 +17,10 @@ export default function FormModal({ isOpen, onClose, phone }) {
         if (isOpen) {
             setError(null);
             // foco al primer input
-            setTimeout(() => firstInputRef.current && firstInputRef.current.focus(), 60);
+            setTimeout(
+                () => firstInputRef.current && firstInputRef.current.focus(),
+                60,
+            );
         } else {
             // limpiar campos si querés al cerrar
             // setNombre(''); setApellido(''); setAsistira(null);
@@ -27,15 +31,15 @@ export default function FormModal({ isOpen, onClose, phone }) {
 
     const validate = () => {
         if (!nombre.trim() || nombre.trim().length < 2) {
-            setError('Por favor ingresá tu nombre (mín. 2 caracteres).');
+            setError("Por favor ingresá tu nombre (mín. 2 caracteres).");
             return false;
         }
         if (!apellido.trim() || apellido.trim().length < 2) {
-            setError('Por favor ingresá tu apellido (mín. 2 caracteres).');
+            setError("Por favor ingresá tu apellido (mín. 2 caracteres).");
             return false;
         }
         if (asistira === null) {
-            setError('Por favor indicá si podrás asistir o no.');
+            setError("Por favor indicá si podrás asistir o no.");
             return false;
         }
         setError(null);
@@ -48,7 +52,7 @@ export default function FormModal({ isOpen, onClose, phone }) {
 
         // armar y abrir WhatsApp con el util
         openWhatsApp({
-            phone: phone || '5493874579414',
+            phone: phone || "5493813399463",
             nombre: nombre.trim(),
             apellido: apellido.trim(),
             asistira: Boolean(asistira),
@@ -56,15 +60,26 @@ export default function FormModal({ isOpen, onClose, phone }) {
         });
 
         // Opcional: cerramos el modal (aunque al abrir WhatsApp generalmente cambia la ventana)
-        if (typeof onClose === 'function') onClose();
+        if (typeof onClose === "function") onClose();
     };
 
     return (
-        <div className="rsvp-backdrop" role="dialog" aria-modal="true" aria-labelledby="rsvpTitle">
+        <div
+            className="rsvp-backdrop"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="rsvpTitle"
+        >
             <div className="rsvp-modal">
-                <button className="rsvp-close" onClick={onClose} aria-label="Cerrar invitación">×</button>
+                <button
+                    className="rsvp-close"
+                    onClick={onClose}
+                    aria-label="Cerrar invitación"
+                >
+                    <FaTimes />
+                </button>
                 <h2 id="rsvpTitle">Confirmar asistencia</h2>
-                
+
                 <form onSubmit={handleSubmit} className="rsvp-form">
                     <label className="rsvp-label">
                         Nombre
@@ -113,11 +128,19 @@ export default function FormModal({ isOpen, onClose, phone }) {
                         </label>
                     </fieldset>
 
-                    {error && <div className="rsvp-error" role="alert">{error}</div>}
+                    {error && (
+                        <div className="rsvp-error" role="alert">
+                            {error}
+                        </div>
+                    )}
 
                     <div className="rsvp-actions">
-                        <button type="submit" className="btn-primary">Enviar por WhatsApp</button>
-                        <button type="button" className="btn-outline" onClick={onClose}>Cancelar</button>
+                        <button type="submit" className="btn-primary">
+                            <FaWhatsapp /> Enviar por WhatsApp
+                        </button>
+                        <button type="button" className="btn-outline" onClick={onClose}>
+                            Cancelar
+                        </button>
                     </div>
                 </form>
             </div>
