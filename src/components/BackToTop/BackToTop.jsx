@@ -1,5 +1,6 @@
 // src/components/BackToTop/BackToTop.jsx
 import React from 'react';
+import { FaArrowUp } from 'react-icons/fa';
 import './BackToTop.css';
 
 // - Botón para volver arriba con smooth scroll
@@ -15,7 +16,7 @@ export default function BackToTop() {
             aria-label="Volver arriba"
             title="Volver arriba"
         >
-            ↑ Arriba
+            <FaArrowUp style={{ marginRight: '6px' }} /> Arriba
         </button>
     );
 }
